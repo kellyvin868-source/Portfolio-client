@@ -1,4 +1,6 @@
+import kelly from '../../assets/kelly.png'
 export default function About() {
+
   return (
     <section className="py-24" id="about">
       <div className="max-w-6xl mx-auto px-6">
@@ -10,7 +12,7 @@ export default function About() {
           <div data-aos="fade-right">
             <div className="relative inline-block">
               <div className="w-72 h-80 bg-[#12122a] border border-violet-900/40 rounded-2xl flex items-center justify-center text-8xl text-violet-600/40 relative z-10">
-                <i className="fas fa-user" />
+               <img className='w-full rotate-90' src={kelly} alt="" />
               </div>
               <div className="absolute inset-[-12px] border-2 border-violet-600/30 rounded-[20px]" />
             </div>
