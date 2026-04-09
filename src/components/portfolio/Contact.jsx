@@ -45,6 +45,7 @@ export default function Contact() {
               ['fas fa-envelope',       'Email',      'kellyvin868@gmail.com'],
               ['fas fa-map-marker-alt', 'Location',   'Kisii, Kenya'],
               ['fas fa-university',     'University', 'Kisii University'],
+              ['fas fa-phone',            'Phone' ,      '0114895068']
             ].map(([icon, label, val]) => (
               <div key={label} className="flex items-start gap-4">
                 <div className="w-11 h-11 rounded-xl bg-violet-900/20 flex items-center justify-center text-violet-400 flex-shrink-0"><i className={icon} /></div>
@@ -58,11 +59,11 @@ export default function Contact() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-medium text-[#8888aa] mb-1.5">Your Name</label>
-                    <input className={inp} placeholder="John Doe" value={form.name} onChange={e => setForm({...form, name: e.target.value})} />
+                    <input className={inp} placeholder="Kelvin Kemboi" value={form.name} onChange={e => setForm({...form, name: e.target.value})} />
                   </div>
                   <div>
                     <label className="block text-xs font-medium text-[#8888aa] mb-1.5">Your Email</label>
-                    <input type="email" className={inp} placeholder="john@example.com" value={form.email} onChange={e => setForm({...form, email: e.target.value})} />
+                    <input type="email" className={inp} placeholder="kelvin@example.com" value={form.email} onChange={e => setForm({...form, email: e.target.value})} />
                   </div>
                 </div>
                 <div>

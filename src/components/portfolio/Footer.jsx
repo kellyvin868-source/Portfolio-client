@@ -13,7 +13,7 @@ export default function Footer() {
             </a>
           ))}
         </div>
-        <p className="text-[#555577] text-xs">&copy; 2024 Kelvin Kiprop Kemboi. All rights reserved.</p>
+        <p className="text-[#555577] text-xs">&copy; {new Date().getFullYear()} Kelvin Kiprop Kemboi. All rights reserved.</p>
       </div>
     </footer>
   );
