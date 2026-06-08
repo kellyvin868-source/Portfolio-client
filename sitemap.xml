@@ -10,7 +10,7 @@
 
   <!-- Example: Projects Page (Remove or edit if you don't have separate pages) -->
   <url>
-    <loc>https://kemboikelvin.vercel.app/projects.html</loc>
+    <loc>https://kemboikelvin.vercel.app/</loc>
     <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
