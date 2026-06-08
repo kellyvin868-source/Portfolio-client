@@ -6,7 +6,7 @@ const skills = [
   { icon: 'fas fa-database',title: 'Database',       tags: ['MongoDB','Mongoose'],                  color: 'text-violet-400 bg-violet-900/20' },
   { icon: 'fas fa-shield-alt',title:'Auth & Security',tags: ['JWT','bcrypt','Middleware'],          color: 'text-violet-400 bg-violet-900/20' },
   { icon: 'fas fa-tools',   title: 'Dev Tools',      tags: ['Git','GitHub','Postman'],              color: 'text-violet-400 bg-violet-900/20' },
-  { icon: 'fas fa-cloud',   title: 'Deployment',     tags: ['Render','Netlify','MongoDB Atlas'],    color: 'text-violet-400 bg-violet-900/20' },
+  { icon: 'fas fa-cloud',   title: 'Deployment',     tags: ['Render','Vercel','MongoDB Atlas'],    color: 'text-violet-400 bg-violet-900/20' },
 ];
 
 export default function Skills() {
