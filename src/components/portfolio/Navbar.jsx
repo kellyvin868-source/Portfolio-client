@@ -21,7 +21,7 @@ export default function Navbar() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#050510]/90 backdrop-blur-xl border-b border-white/5 py-3' : 'py-4'}`}>
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         <a href="#home" className="font-mono font-bold text-xl">
-          <span className="text-violet-400">&lt;</span>KKK<span className="text-violet-400">/&gt;</span>
+          <span className="text-violet-400">&lt;</span>Kelvin<span className="text-violet-400">/&gt;</span>
         </a>
         <ul className="hidden md:flex items-center gap-1">
           {links.map(l => (

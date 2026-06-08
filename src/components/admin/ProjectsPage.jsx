@@ -25,6 +25,7 @@ export default function ProjectsPage() {
 
   useEffect(load, []);
 
+
   const openAdd = () => { setForm(emptyForm); setEditId(null); setImgFile(null); setPreview(''); setModal(true); };
 
   const openEdit = async (id) => {
@@ -42,11 +43,11 @@ export default function ProjectsPage() {
   const closeModal = () => { setModal(false); setForm(emptyForm); setEditId(null); setImgFile(null); setPreview(''); };
 
   const handleImg = (e) => {
-    const f = e.target.files[0];
-    if (!f) return;
-    setImgFile(f);
+    const file = e.target.files[0];
+    if (!file) return;
+    setImgFile(file);
     if (preview.startsWith('blob:')) URL.revokeObjectURL(preview);
-    setPreview(URL.createObjectURL(f));
+    setPreview(URL.createObjectURL(file));
   };
 
   const handleSubmit = async (e) => {
@@ -55,7 +56,7 @@ export default function ProjectsPage() {
     setSaving(true);
     const fd = new FormData();
     Object.entries(form).forEach(([k, v]) => fd.append(k, v));
-    if (imgFile) fd.append('image', imgFile);
+    if (imgFile) fd.append('file', imgFile);
     try {
       if (editId) await api.put(`/api/projects/${editId}`, fd);
       else        await api.post('/api/projects', fd);
@@ -80,12 +81,13 @@ export default function ProjectsPage() {
 
   return (
     <div>
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex  items-center justify-between mb-6">
         <h2 className="text-xl font-bold">Projects</h2>
         <button onClick={openAdd} disabled={editLoading} className="inline-flex items-center gap-2 px-4 py-2 rounded-full gradient-bg text-white text-sm font-semibold hover:-translate-y-0.5 transition-all disabled:opacity-60">
           <i className="fas fa-plus" /> Add Project
         </button>
       </div>
+      
 
       {error && <p className="text-red-400 text-sm mb-4 bg-red-900/10 border border-red-500/20 rounded-xl px-4 py-3">{error}</p>}
 
@@ -94,7 +96,7 @@ export default function ProjectsPage() {
       ) : !projects.length ? (
         <div className="text-center py-16 text-[#8888aa]"><i className="fas fa-code text-4xl mb-3 opacity-30 block" />No projects yet. Add your first one!</div>
       ) : (
-        <div className="space-y-3">
+        <div className=" grid grid-cols-1 space-y-3 ">
           {projects.map(p => (
             <div key={p._id} className="bg-[#12122a] border border-white/5 rounded-2xl p-4 flex items-start gap-4 hover:border-white/10 transition-all">
               {p.image
